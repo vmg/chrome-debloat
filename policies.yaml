@@ -1,0 +1,180 @@
+chromeExtensions: &chromeExtensions
+  ExtensionManifestV2Availability: 2
+  ExtensionInstallForcelist:
+  - cjpalhdlnbpafiamejdnhcphjbkeiagm # uBlock Origin; Chrome Web Store
+  - fhcgjolkccmbidfldomjliifgaodjagh # Cookie AutoDelete; Chrome Web Store
+  - aeblfdkhhhdcdjpifhhbdiojplfjncoa # 1Password; Chrome Web Store
+  - nkgllhigpcljnhoakjkgaieabnkmgdkb # Don't f*** with paste; Chrome Web Store
+  - edibdbjcniadpccecjdfdjjppcpchdlm # I still don't care about cookies; Chrome Web Store
+  - lcbjdhceifofjlpecfpeimnnphbcjgnc # xBrowserSync; Chrome Web Store
+  - mnjggcdmjocbbbhaepdhchncahnbgone # SponsorBlock; Chrome Web Store
+  - bbeaicapbccfllodepmimpkgecanonai # BlockTube; Chrome Web Store
+  - jaadjnlkjnhohljficgoddcjmndjfdmi # Blank Tab; Chrome Web Store
+  - ldpochfccmkkmhdbclfhpagapcfdljkj # Decentraleyes; Chrome Web Store
+
+# https://chromeenterprise.google/policies/
+chrome: &chrome
+  <<: *chromeExtensions
+  # Content Settings
+  DefaultGeolocationSetting: 2
+  DefaultNotificationsSetting: 2
+  DefaultLocalFontsSetting: 2
+  DefaultSensorsSetting: 2
+  DefaultSerialGuardSetting: 2
+  # Cloud Reporting
+  CloudReportingEnabled: false
+  # Drive
+  DriveDisabled: true
+  # Password
+  PasswordManagerEnabled: false
+  PasswordSharingEnabled: false
+  PasswordLeakDetectionEnabled: false
+  # Quick Answers
+  QuickAnswersEnabled: false
+  # Safe Browsing
+  SafeBrowsingExtendedReportingEnabled: false
+  SafeBrowsingSurveysEnabled: false
+  SafeBrowsingDeepScanningEnabled: false
+  # User and device reporting
+  DeviceActivityHeartbeatEnabled: false
+  DeviceMetricsReportingEnabled: false
+  HeartbeatEnabled: false
+  LogUploadEnabled: false
+  ReportAppInventory:
+  - ""
+  ReportDeviceActivityTimes: false
+  ReportDeviceAppInfo: false
+  ReportDeviceSystemInfo: false
+  ReportDeviceUsers: false
+  ReportWebsiteTelemetry:
+  - ""
+  # Miscellaneous
+  AlternateErrorPagesEnabled: false
+  AutofillCreditCardEnabled: false
+  BackgroundModeEnabled: false
+  BrowserGuestModeEnabled: false
+  BrowserSignin: 0
+  BuiltInDnsClientEnabled: false
+  DefaultBrowserSettingEnabled: false
+  MetricsReportingEnabled: false
+  ParcelTrackingEnabled: false
+  RelatedWebsiteSetsEnabled: false
+  ShoppingListEnabled: false
+  SyncDisabled: true
+
+# https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy
+brave: &brave
+  <<: *chrome
+  TorDisabled: true
+  BraveRewardsDisabled: true
+  BraveWalletDisabled: true
+  BraveVPNDisabled: true
+  BraveAIChatEnabled: false
+  BraveSyncUrl: ""
+
+# https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies
+edge: &edge
+  <<: *chrome
+  # Application Guard
+  ApplicationGuardFavoritesSyncEnabled: false
+  ApplicationGuardPassiveModeEnabled: false
+  ApplicationGuardUploadBlockingEnabled: false
+  # Edge Typo Protection settings
+  TyposquattingCheckerEnabled: false
+  # Edge Workspaces
+  EdgeWorkspacesEnabled: false
+  # Extensions
+  ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled: true
+  BlockExternalExtensions: false
+  ExtensionInstallForcelist:
+  - odfafepnkmbhccpbejgmiehpchacaeak # uBlock Origin; Edge Web Store
+  - djkjpnciiommncecmdefpdllknjdmmmo # Cookie AutoDelete; Edge Web Store
+  - kkacdgacpkediooahopgcbdahlpipheh # I still don't care about cookies; Edge Web Store
+  - ihknoknoahjhldmpdoajjdkfjhddgpcd # Blank Tab; Edge Web Store
+  - dppgmdbiimibapkepcbdbmkaabgiofem # 1Password; Edge Web Store
+  # Identity & SignIn
+  ImplicitSignInEnabled: false
+  LinkedAccountEnabled: false
+  ProactiveAuthWorkflowEnabled: false
+  # Manageability
+  EdgeManagementEnabled: false
+  EdgeManagementExtensionsFeedbackEnabled: false
+  MAMEnabled: false
+  # Password Manager
+  PasswordGeneratorEnabled: false
+  PasswordRevealEnabled: false
+  PasswordMonitorAllowed: false
+  # Related Website Sets
+  RelatedWebsiteSetsEnabled: false
+  # Scareware Blocker
+  ScarewareBlockerProtectionEnabled: false
+  # SmartScreen settings
+  SmartScreenEnabled: false
+  SmartScreenPuaEnabled: false
+  SmartScreenForTrustedDownloadsEnabled: false
+  SmartScreenDnsRequestsEnabled: false
+  # Startup, home page and new tab page
+  NewTabPageAppLauncherEnabled: false
+  NewTabPageBingChatEnabled: false
+  NewTabPageContentEnabled: false
+  NewTabPageHideDefaultTopSites: true
+  NewTabPagePrerenderEnabled: false
+  NewTabPageQuickLinksEnabled: false
+  # Additional
+  AADWebSiteSSOUsingThisProfileEnabled: false
+  AccessibilityImageLabelsEnabled: false
+  AddressBarMicrosoftSearchInBingProviderEnabled: false
+  AIGenThemesEnabled: false
+  AllowGamesMenu: false
+  AlternateErrorPagesEnabled: false
+  AmbientAuthenticationInPrivateModesEnabled: false
+  AutomaticHttpsDefault: true # improved QoL
+  BingAdsSuppression: true
+  ComposeInlineEnabled: false
+  ConfigureDoNotTrack: false
+  CryptoWalletEnabled: false
+  DiagnosticData: 0
+  Edge3PSerpTelemetryEnabled: false
+  EdgeAssetDeliveryServiceEnabled: false
+  EdgeCollectionsEnabled: false
+  EdgeDiscoverEnabled: false
+  EdgeEDropEnabled: false
+  EdgeEnhanceImagesEnabled: false
+  EdgeFollowEnabled: false
+  EdgeShoppingAssistantEnabled: false
+  EdgeWalletCheckoutEnabled: false
+  EdgeWalletEtreeEnabled: false
+  ExperimentationAndConfigurationServiceControl: 0
+  ForceSync: false
+  HubsSidebarEnabled: false
+  ImageEditorServiceEnabled: false
+  InAppSupportEnabled: false
+  InternetExplorerIntegrationLevel: 0
+  LiveCaptionsAllowed: false
+  LiveTranslationAllowed: false
+  MathSolverEnabled: false
+  MicrosoftEdgeInsiderPromotionEnabled: false
+  MicrosoftEditorProofingEnabled: false
+  MicrosoftEditorSynonymsEnabled: false
+  MicrosoftOfficeMenuEnabled: false
+  OutlookHubMenuEnabled: false
+  PaymentMethodQueryEnabled: false
+  PersonalizationReportingEnabled: false
+  PersonalizeTopSitesInCustomizeSidebarEnabled: false
+  PictureInPictureOverlayEnabled: false
+  PromotionalTabsEnabled: false
+  PromptForDownloadLocation: false # improved QoL
+  ResolveNavigationErrorsUseWebService: false
+  ShowMicrosoftRewards: false
+  ShowRecommendationsEnabled: false
+  SpeechRecognitionEnabled: false
+  StandaloneHubsSidebarEnabled: false
+  TextPredictionEnabled: false
+  TranslateEnabled: true # improved QoL
+  TravelAssistanceEnabled: false
+  UploadFromPhoneEnabled: false
+  UrlDiagnosticDataEnabled: false
+  UserFeedbackAllowed: false
+  VisualSearchEnabled: false
+  WalletDonationEnabled: false
+  WebWidgetAllowed: false
