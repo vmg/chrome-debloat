@@ -4,5 +4,5 @@ version = "0.1.0"
 description = "Browser policies to debloat Chrome/Chromium browsers"
 readme = "README.md"
 requires-python = ">=3.9"
-license = "Apache-2.0"
+license = { file = "LICENSE" }
 dependencies = ["ruamel-yaml>=0.18.6"]
