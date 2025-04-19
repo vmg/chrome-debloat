@@ -31,13 +31,13 @@ A tool to generate policies for Chromium-based browsers (Chrome, Brave, and Edge
 ### Windows
 1.  Download the `.reg` file for your browser from [`generated/windows/`](./generated/windows/).
 2.  Open the downloaded `.reg` file to add the settings to the Windows Registry.
-3.  Restart your browser or go to `chrome://policy` (or equivalent) and click "Reload policies".
+3.  Restart your browser or go to `chrome://policy` (or `edge://policy`, `brave://policy`) and click "Reload policies".
 
 ### macOS
 1.  Download the `.mobileconfig` file for your browser from [`generated/macos/`](./generated/macos/).
 2.  Open the downloaded `.mobileconfig` file to start the profile installation.
 3.  Go to `System Settings` > `Privacy & Security` > `Profiles` and approve the new profile.
-4.  Restart your browser or go to `chrome://policy` (or equivalent) and click "Reload policies".
+4.  Restart your browser or go to `chrome://policy` (or `edge://policy`, `brave://policy`) and click "Reload policies".
 
 ### Linux
 1.  Download the `.json` file for your browser from [`generated/linux/`](./generated/linux/).
@@ -63,6 +63,27 @@ If you want to customize the policies:
    uv run main.py
    ```
 5. Find the generated files in `generated/` directory
+
+
+### Uninstalling Policies
+
+**Windows:**
+1.  Navigate to the [`uninstall/windows/`](./uninstall/) directory in this repository.
+2.  Run the `.reg` file corresponding to your browser (e.g., `uninstall_chrome.reg`). This will remove the registry keys added during installation.
+3.  Restart your browser or go to `chrome://policy` (or `edge://policy`, `brave://policy`) and click "Reload policies".
+
+**macOS:**
+1.  Go to `System Settings` > `Privacy & Security` > `Profiles`.
+2.  Select the profile associated with your browser (e.g., "Chrome Debloat Policies").
+3.  Click the '-' (minus) button to remove the profile.
+4.  Restart your browser or go to `chrome://policy` (or `edge://policy`, `brave://policy`) and click "Reload policies".
+
+**Linux:**
+1.  Remove the policy JSON file from the browser-specific directory (you might need `sudo` rights):
+    *   **Chrome:** `sudo rm /etc/opt/chrome/policies/managed/chrome.json`
+    *   **Edge:** `sudo rm /etc/opt/edge/policies/managed/edge.json`
+    *   **Brave:** `sudo rm /etc/brave/policies/managed/brave.json`
+2.  Restart your browser or go to `chrome://policy` (or `edge://policy`, `brave://policy`) and click "Reload policies".
 
 ## Policy Documentation
 
