@@ -89,10 +89,13 @@ edge: &edge
   - djkjpnciiommncecmdefpdllknjdmmmo # Cookie AutoDelete; Edge Web Store
   - kkacdgacpkediooahopgcbdahlpipheh # I still don't care about cookies; Edge Web Store
   - ihknoknoahjhldmpdoajjdkfjhddgpcd # Blank Tab; Edge Web Store
+  # Generative AI
+  GenAILocalFoundationalModelSettings: 1
   # Identity & SignIn
   ImplicitSignInEnabled: false
   LinkedAccountEnabled: false
   ProactiveAuthWorkflowEnabled: false
+  WebToBrowserSignInEnabled: false
   # Manageability
   EdgeManagementEnabled: false
   EdgeManagementExtensionsFeedbackEnabled: false

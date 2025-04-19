@@ -22,22 +22,31 @@ A tool to generate policies for Chromium-based browsers (Chrome, Brave, and Edge
 
 | Browser | Windows | macOS | Linux |
 |---------|---------|-------|-------|
-| Google Chrome | ✅ | ✅ | ❌ |
-| Microsoft Edge | ✅ | ✅ | ❌ |
-| Brave | ✅ | ✅ | ❌ |
+| Google Chrome | ✅ | ✅ | ✅ |
+| Microsoft Edge | ✅ | ✅ | ✅ |
+| Brave | ✅ | ✅ | ✅ |
 
 ## Quick Start
 
 ### Windows
-1. Download the `.reg` file for your browser from the `generated/windows/` directory
-2. Double click to import the registry settings
-3. Restart your browser or visit `chrome://policy` and click "Reload Policy" 
+1.  Download the `.reg` file for your browser from [`generated/windows/`](./generated/windows/).
+2.  Open the downloaded `.reg` file to add the settings to the Windows Registry.
+3.  Restart your browser or go to `chrome://policy` (or equivalent) and click "Reload policies".
 
 ### macOS
-1. Download the `.mobileconfig` file for your browser from the `generated/macos/` directory
-2. Double click to install the profile
-3. Approve the profile installation in System Settings > Privacy & Security > Profiles
-4. Restart your browser or visit `chrome://policy` and click "Reload Policy" 
+1.  Download the `.mobileconfig` file for your browser from [`generated/macos/`](./generated/macos/).
+2.  Open the downloaded `.mobileconfig` file to start the profile installation.
+3.  Go to `System Settings` > `Privacy & Security` > `Profiles` and approve the new profile.
+4.  Restart your browser or go to `chrome://policy` (or equivalent) and click "Reload policies".
+
+### Linux
+1.  Download the `.json` file for your browser from [`generated/linux/`](./generated/linux/).
+2.  Move the downloaded file to the correct policy directory (create it if needed):
+    *   **Chrome:** `/etc/opt/chrome/policies/managed/chrome.json`
+    *   **Edge:** `/etc/opt/edge/policies/managed/edge.json`
+    *   **Brave:** `/etc/brave/policies/managed/brave.json`
+    *   *Note: You might need `sudo` rights to do this.*
+3.  Restart your browser or go to `chrome://policy` (or `edge://policy`, `brave://policy`) and click "Reload policies".
 
 ## Custom Configuration
 

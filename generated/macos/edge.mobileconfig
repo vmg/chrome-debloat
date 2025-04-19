@@ -52,11 +52,15 @@
 				<string>kkacdgacpkediooahopgcbdahlpipheh</string>
 				<string>ihknoknoahjhldmpdoajjdkfjhddgpcd</string>
 			</array>
+			<key>GenAILocalFoundationalModelSettings</key>
+			<integer>1</integer>
 			<key>ImplicitSignInEnabled</key>
 			<false/>
 			<key>LinkedAccountEnabled</key>
 			<false/>
 			<key>ProactiveAuthWorkflowEnabled</key>
+			<false/>
+			<key>WebToBrowserSignInEnabled</key>
 			<false/>
 			<key>EdgeManagementEnabled</key>
 			<false/>

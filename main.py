@@ -1,6 +1,8 @@
-from ruamel.yaml import YAML
+import json
 import plistlib
 from pathlib import Path
+
+from ruamel.yaml import YAML
 
 yaml = YAML()
 
@@ -154,6 +156,16 @@ def write_reg_config(path: str, policy_content: dict, metadata: dict):
         print(f"Error: {e}")
 
 
+def write_json_config(path: str, policy_content: dict, metadata: dict):
+    try:
+        json_path = Path(path)
+        json_path.parent.mkdir(parents=True, exist_ok=True)
+        with json_path.open("w") as fp:
+            json.dump(policy_content, fp, indent=2)
+    except Exception as e:
+        print(f"Error: {e}")
+
+
 def main():
     """Generate OS-specific browser policies from policy spec"""
 
@@ -169,6 +181,11 @@ def main():
             f"./generated/windows/{pname}.reg",
             policies[pname],
             METADATA[pname]["registry"],
+        )
+        write_json_config(
+            f"./generated/linux/{pname}.json",
+            policies[pname],
+            {},
         )
 
 

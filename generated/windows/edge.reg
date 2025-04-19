@@ -8,9 +8,11 @@ Windows Registry Editor Version 5.00
 "EdgeWorkspacesEnabled"=dword:00000000
 "ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled"=dword:00000001
 "BlockExternalExtensions"=dword:00000000
+"GenAILocalFoundationalModelSettings"=dword:00000001
 "ImplicitSignInEnabled"=dword:00000000
 "LinkedAccountEnabled"=dword:00000000
 "ProactiveAuthWorkflowEnabled"=dword:00000000
+"WebToBrowserSignInEnabled"=dword:00000000
 "EdgeManagementEnabled"=dword:00000000
 "EdgeManagementExtensionsFeedbackEnabled"=dword:00000000
 "MAMEnabled"=dword:00000000
