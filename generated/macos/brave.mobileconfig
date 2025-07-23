@@ -41,8 +41,6 @@
 			<true/>
 			<key>BraveAIChatEnabled</key>
 			<false/>
-			<key>BraveSyncUrl</key>
-			<string></string>
 			<key>DefaultGeolocationSetting</key>
 			<integer>2</integer>
 			<key>DefaultNotificationsSetting</key>
@@ -117,21 +115,8 @@
 			<false/>
 			<key>ShoppingListEnabled</key>
 			<false/>
-			<key>SyncDisabled</key>
-			<true/>
 			<key>ExtensionManifestV2Availability</key>
 			<integer>2</integer>
-			<key>ExtensionInstallForcelist</key>
-			<array>
-				<string>cjpalhdlnbpafiamejdnhcphjbkeiagm</string>
-				<string>fhcgjolkccmbidfldomjliifgaodjagh</string>
-				<string>nkgllhigpcljnhoakjkgaieabnkmgdkb</string>
-				<string>edibdbjcniadpccecjdfdjjppcpchdlm</string>
-				<string>mnjggcdmjocbbbhaepdhchncahnbgone</string>
-				<string>bbeaicapbccfllodepmimpkgecanonai</string>
-				<string>jaadjnlkjnhohljficgoddcjmndjfdmi</string>
-				<string>ldpochfccmkkmhdbclfhpagapcfdljkj</string>
-			</array>
 		</dict>
 	</array>
 </dict>
